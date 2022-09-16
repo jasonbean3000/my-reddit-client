@@ -1,11 +1,11 @@
 import { React }from "react";
 import { useDispatch, useSelector } from "react-redux/es/exports";
-import { fetchSubreddits, selectSubreddits } from "../../app/subRedditSlice";
+import { selectSubreddits } from "../../app/subRedditSlice";
 import { setSelectedSubreddit, selectSelectedSubreddit } from "../../app/redditSlice";
 import './Subreddits.css'
 import greenbean from '../../resources/images/greenbeans.jpg'
 import { NavLink } from "react-router-dom";
-import ScrollToTop from "../../utilities/ScrollToTop";
+
 
 export default function Subreddits() {
 
