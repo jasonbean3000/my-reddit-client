@@ -1,6 +1,5 @@
 import React from 'react';
 import { BrowserRouter as Router, Redirect, Route } from 'react-router-dom';
- 
 import './App.css';
 import Content from './features/Content/Content';
 import Subreddits from './features/Subreddits/Subreddits';
