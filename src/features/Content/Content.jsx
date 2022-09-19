@@ -16,7 +16,7 @@ export default function Content() {
 
     useEffect(() => {
         dispatch(fetchPosts(selectedSubreddit));
-        
+      // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [selectedSubreddit]);
 
     const onToggleComments = (index) => {
