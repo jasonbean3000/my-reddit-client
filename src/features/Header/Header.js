@@ -11,8 +11,8 @@ import greenbean from '../../resources/images/greenbeans.jpg'
 export default function Header() {
 
     const dispatch = useDispatch();
-    const subreddits = useSelector(selectSubreddits);
-    const selectedSubreddit = useSelector(selectSelectedSubreddit);
+    // const subreddits = useSelector(selectSubreddits);
+    // const selectedSubreddit = useSelector(selectSelectedSubreddit);
     
     
 

@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from "react-redux/es/exports";
 import { selectSubreddits } from "../../app/subRedditSlice";
 import { setSelectedSubreddit, selectSelectedSubreddit } from "../../app/redditSlice";
 import './Subreddits.css'
-import greenbean from '../../resources/images/greenbeans.jpg'
 import { NavLink } from "react-router-dom";
 
 

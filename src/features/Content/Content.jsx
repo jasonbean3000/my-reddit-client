@@ -9,7 +9,7 @@ export default function Content() {
 
     const reddit = useSelector((state) => state.reddit);
 
-    const { isLoading, error, searchTerm, selectedSubreddit } = reddit;
+    const { isLoading, /*error, searchTerm,*/ selectedSubreddit } = reddit;
 
     const posts = useSelector(selectFilteredPosts);
     const dispatch = useDispatch();

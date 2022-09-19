@@ -2,7 +2,7 @@ import React from "react";
 import './Post.css'
 
 export default function Post(props) {
-    const { post, index } = props;
+    const { post, /*index*/ } = props;
 
     return (
         <div className="post" key={post.id}>
