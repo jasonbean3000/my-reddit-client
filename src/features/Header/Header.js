@@ -1,7 +1,7 @@
 import { React }from "react";
-import { useDispatch, useSelector } from "react-redux/es/exports";
-import { selectSubreddits } from "../../app/subRedditSlice";
-import { setSelectedSubreddit, selectSelectedSubreddit } from "../../app/redditSlice";
+import { useDispatch, /*useSelector*/ } from "react-redux/es/exports";
+import { /*selectSubreddits*/ } from "../../app/subRedditSlice";
+import { setSelectedSubreddit, /*selectSelectedSubreddit*/ } from "../../app/redditSlice";
 import { HiOutlineSearch } from 'react-icons/hi';
 import './Header.css'
 import greenbean from '../../resources/images/greenbeans.jpg'

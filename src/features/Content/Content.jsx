@@ -1,7 +1,7 @@
 import React from "react";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux/es/exports";
-import { fetchPosts, selectFilteredPosts, setSearchTerm, fetchComments } from "../../app/redditSlice";
+import { fetchPosts, selectFilteredPosts, /*setSearchTerm,*/ fetchComments } from "../../app/redditSlice";
 import Post from "../Post/Post";
 import './Content.css'
 
