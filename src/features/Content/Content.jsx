@@ -16,6 +16,7 @@ export default function Content() {
 
     useEffect(() => {
         dispatch(fetchPosts(selectedSubreddit));
+        
     }, [selectedSubreddit]);
 
     const onToggleComments = (index) => {
