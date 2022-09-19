@@ -6,16 +6,18 @@ export default function Post(props) {
 
     return (
         <div className="post" key={post.id}>
-            <p className="post-title">{post.title}</p>
-            <img src={post.url} alt="" className="post-image" />       
+            
             <a
                 className="post-author" 
                 href={post.url} 
                 target="_blank" 
                 rel="noreferrer"
                 >
-                by {post.author}
+                Posted by {post.author}
             </a>
+            <p className="post-title">{post.title}</p>
+            <img src={post.url} alt="" className="post-image" />       
+            
         </div>
     )
 

@@ -35,6 +35,7 @@ export default function Content() {
     }  
     
     return (
+      
         <>
         {posts.map((post, index) => (
           <Post

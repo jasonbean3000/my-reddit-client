@@ -18,12 +18,7 @@ export default function Subreddits() {
     return (
         <div className="subreddit">
         
-            <div
-                className="header-title-container"
-                onClick={() => dispatch(setSelectedSubreddit('/r/soccer'))}>
-                <img src={greenbean} alt='' className="green-bean-logo"/>
-                <h3 className="header-title">Reddit<span>Bean</span></h3>
-            </div>
+            
             
             <div className="button-container">
             
@@ -34,16 +29,20 @@ export default function Subreddits() {
                             selectedSubreddit === subreddit.url && `selected-subreddit`
                           }`}
                         >
+                        
                         <NavLink to={subreddit.url}
+                            
                             className='navlink'
                             
                             type="button"
                             onClick={() => dispatch(setSelectedSubreddit(subreddit.url))}
                             >
                             <span activeClassName="active-link">{subreddit.title}</span>
+                            
                         </NavLink>  
+                        
                     </div>
-                ))};
+                ))}
             </div>
         </div>
     )

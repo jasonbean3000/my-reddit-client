@@ -1,7 +1,7 @@
 .post {
-    width: 45%;
+    background-color: #FFFFFF;
+    margin: 0% 0% 2% 1%;
     height: fit-content;
-    margin: 1%;
     border-radius: 10px;
     padding: 0px 0px 5px 0px;
     box-shadow:
@@ -13,26 +13,26 @@
 
 .post-title {
     color: black;
-    margin: 0px;
-    padding: 2% 2% 5% 2%;
+    padding: 1% 2% 2% 2%;
     font-size: 1.1rem;
     font-weight: 600;
     font-family: 'Open Sans', 'Courier New', Courier, monospace;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
 }
 
 .post-image {
-    max-width: 100%;
+    max-height: 300px;
+    max-width: 400px;
+    position: relative;
+    float: right ;
+    margin-right: 2%;
 }
-
 
 .post-author {
     text-decoration: none;
     padding-left: 2%;
-    color: #420029;
+    color: #000000;
     font-weight: 800;
-    
+    line-height: 4rem;
 }
 
 .post-author:hover {

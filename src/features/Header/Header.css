@@ -1,0 +1,51 @@
+.header-title-container {
+    display: flex;
+    justify-content: center;
+    padding: 1%;
+}
+
+.header-title:hover {
+    cursor: pointer;
+}
+
+.header-title {
+    text-align: left;
+    margin-left: 1%;
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+.header-title span {
+    color: #278f1d;
+}
+
+.green-bean-logo {
+    height: 5rem;
+    width: 5rem;
+}
+
+.green-bean-logo:hover {
+    cursor: pointer;
+}
+
+.search {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #2B2B2B;
+    height: 1.8rem;
+    padding: 1%;
+}
+
+input {
+    width: 30rem;
+}
+
+button {
+    margin-left: .2%;
+}
+
+button:hover {
+    cursor: pointer;
+}
