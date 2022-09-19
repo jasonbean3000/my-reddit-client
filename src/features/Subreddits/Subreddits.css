@@ -1,10 +1,6 @@
-
-
 .button-container {
-    
     background-color: #FFFFFF;
     margin-top: 18px;
-    width: 100%;
     height: auto;
     padding: 5%;
     border-radius: 8px;
@@ -36,5 +32,9 @@
     text-decoration: underline;
 }
 
-
+.icon-image {
+    height: 30px;
+    width: 30px;
+    margin-right: 2%;
+}
 

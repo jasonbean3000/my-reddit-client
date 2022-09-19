@@ -36,6 +36,7 @@ export default function Subreddits() {
                             type="button"
                             onClick={() => dispatch(setSelectedSubreddit(subreddit.url))}
                             >
+                            <img className="icon-image" src={subreddit.icon_img} alt=""/>
                             <span activeClassName="active-link">{subreddit.title}</span>
                             
                         </NavLink>  

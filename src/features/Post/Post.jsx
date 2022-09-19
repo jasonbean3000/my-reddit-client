@@ -5,7 +5,7 @@ import {
   } from 'react-icons/ti';
 
 import Comment from '../Comment/Comment';
-
+import Avatar from "../Avatar/Avatar";
 export default function Post(props) {
     const { post, onToggleComments } = props;
 
@@ -52,7 +52,7 @@ export default function Post(props) {
 
     return (
         <div className="post" key={post.id}>
-            
+            <Avatar name={post.author} />
             <a
                 className="post-author" 
                 href={post.url} 
@@ -71,8 +71,9 @@ export default function Post(props) {
                   }`}
                   onClick={() => onToggleComments(post.permalink)}
                   aria-label="Show comments"
-                >
+                > 
                   <TiMessage className="icon-action" />
+                  Show Comments
                 </button>
                 {/* {shortenNumber(post.num_comments, 1)} */}
               </span>
