@@ -9,7 +9,7 @@ export default function Content() {
 
     const reddit = useSelector((state) => state.reddit);
 
-    const { isLoading, /*error, searchTerm,*/ selectedSubreddit } = reddit;
+    const { isLoading, error, /* searchTerm,*/ selectedSubreddit } = reddit;
 
     const posts = useSelector(selectFilteredPosts);
     const dispatch = useDispatch();
@@ -29,11 +29,36 @@ export default function Content() {
 
     if (isLoading) {
       return (
-        
-        <div class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
-        
+        <div class="lds-spinner">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          </div>
       );
     }  
+
+    if (error) {
+      return (
+        <div className="error">
+          <h2>Failed to load posts.</h2>
+          <button
+            type="button"
+            onClick={() => dispatch(fetchPosts(selectedSubreddit))}
+          >
+            Try again
+          </button>
+        </div>
+      );
+    }
     
     return (
       
