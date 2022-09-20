@@ -12,15 +12,14 @@ export default function Subreddits() {
     const subreddits = useSelector(selectSubreddits);
     const selectedSubreddit = useSelector(selectSelectedSubreddit);
     
-    
 
     return (
         <div className="subreddit">
         
             
-            
+        
             <div className="button-container">
-            
+            <article className="subreddits-header">FEATURED SUBREDDITS</article>
                 {subreddits.map((subreddit) => (
                     <div
                         key={subreddit.id}
@@ -28,17 +27,18 @@ export default function Subreddits() {
                             selectedSubreddit === subreddit.url && `selected-subreddit`
                           }`}
                         >
-                        
                         <NavLink to={subreddit.url}
-                            
                             className='navlink'
-                            
                             type="button"
                             onClick={() => dispatch(setSelectedSubreddit(subreddit.url))}
                             >
-                            <img className="icon-image" src={subreddit.icon_img} alt=""/>
-                            <span activeClassName="active-link">{subreddit.title}</span>
-                            
+                            <div className="navlink-img">
+                                <img className="icon-image" src={subreddit.icon_img} alt=""/>
+                            </div>    
+                            <div className="navlink-info">
+                                <span activeClassName="active-link">{subreddit.title}</span>
+                                <article className="subscribers">{subreddit.subscribers} subscribers</article>
+                            </div>
                         </NavLink>  
                         
                     </div>

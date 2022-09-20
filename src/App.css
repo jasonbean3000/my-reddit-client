@@ -13,7 +13,7 @@ main {
 }
 
 aside {
-  width: 15%;
+  width: 13%;
   position: fixed;
   z-index: 1;
   grid-area: aside;

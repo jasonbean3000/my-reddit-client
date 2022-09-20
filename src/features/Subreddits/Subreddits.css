@@ -12,29 +12,49 @@
 }
 
 .navlink {
-    line-height: 30px;
+    display: flex;
     text-decoration: none;
     color: rgb(36, 34, 34);
-    font-size: 1.1rem;
     font-weight: 100;
     border-color: rgb(66, 64, 64);
     text-transform: uppercase;
+    padding-bottom: 5%;
+    padding-top: 5%;
 }
 
 .navlink:hover {
     cursor: pointer;
-    text-decoration: underline;
-    font-size: 1.15rem;
+    background-color: #F0F0F0;
 }
 
-
 .selected-subreddit {
-    text-decoration: underline;
+    background-color: #F0F0F0;
 }
 
 .icon-image {
     height: 30px;
     width: 30px;
-    margin-right: 2%;
+    border-radius: 50%;
 }
 
+.subreddits-header {
+    border-bottom-style: groove;
+    padding-bottom: 3%;
+    margin-bottom: 5%;
+    font-weight: bold;
+    color: #535351;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+}
+
+.subscribers {
+    text-transform: lowercase;
+}
+
+.navlink-info {
+    padding-left: 5%;
+}
+
+.navlink-img {
+    display: flex;
+    align-items: center;
+}
