@@ -32,7 +32,17 @@ aside {
   margin-right: 5%;
 }
 
+@media only screen and (max-width: 500px) {
+  main {
+    grid-template-areas: "aside container container";
+  }
+}
 
+@media only screen and (max-width: 500px) {
+  aside {
+   width: 20%;
+  }
+}
 
 
 
