@@ -44,6 +44,30 @@ aside {
   }
 }
 
+@media only screen and (max-width: 1300px ) and (min-width: 1000px){
+  aside {
+   position: relative;
+   width: 60%;
+   z-index: 0;
+  }
+}
 
+@media only screen and (max-width: 950px ) and (min-width: 700px){
+  aside {
+   
+   width: 20%;
+   
+  }
+}
+
+@media only screen and (max-width: 550px ) {
+  aside {
+   width: 20%;
+  }
+  main {
+    grid-template-areas: "aside container container";
+  }
+
+}
 
 
