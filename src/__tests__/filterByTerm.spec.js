@@ -1,4 +1,4 @@
-const filterByTerm = require("../filterByTerm");
+import filterByTerm from "../filterByTerm"
 
 
 describe("Filter function", () => {

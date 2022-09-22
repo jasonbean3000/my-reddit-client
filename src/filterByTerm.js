@@ -1,4 +1,4 @@
-function filterByTerm(inputArr, searchTerm) {
+ export default function filterByTerm(inputArr, searchTerm) {
   if (!searchTerm) throw Error("searchTerm cannot be empty");
   const regex = new RegExp(searchTerm, "i");
   return inputArr.filter(function(arrayElement) {
@@ -6,5 +6,5 @@ function filterByTerm(inputArr, searchTerm) {
   });
 }
 
-module.exports = filterByTerm;
+
 

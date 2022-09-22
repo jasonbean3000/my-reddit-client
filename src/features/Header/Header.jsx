@@ -1,5 +1,5 @@
 import { React }from "react";
-import { useDispatch, useSelector } from "react-redux/es/exports";
+import { useDispatch, useSelector } from "react-redux";
 import { useState, useEffect } from "react";
 import { /*selectSubreddits*/ } from "../../app/subRedditSlice";
 import { setSelectedSubreddit, /*selectSelectedSubreddit*/ } from "../../app/redditSlice";

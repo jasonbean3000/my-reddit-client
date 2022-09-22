@@ -1,5 +1,5 @@
 import { React }from "react";
-import { useDispatch, useSelector } from "react-redux/es/exports";
+import { useDispatch, useSelector } from "react-redux";
 import { selectSubreddits } from "../../app/subRedditSlice";
 import { setSelectedSubreddit, selectSelectedSubreddit } from "../../app/redditSlice";
 import './Subreddits.css'
@@ -36,7 +36,7 @@ export default function Subreddits() {
                                 <img className="icon-image" src={subreddit.icon_img} alt=""/>
                             </div>    
                             <div className="navlink-info">
-                                <span activeClassName="active-link">{subreddit.title}</span>
+                                <span>{subreddit.title}</span>
                                 <article className="subscribers">{subreddit.subscribers} subscribers</article>
                             </div>
                         </NavLink>  

@@ -63,6 +63,7 @@ export default function Post(props) {
             </a>
             <p className="post-title">{post.title}</p>
             <p>{post.comment}</p>
+            
             <img src={post.url} alt="" className="post-image" />       
             <span className="post-comments-container">
                 <button

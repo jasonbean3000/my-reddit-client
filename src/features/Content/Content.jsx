@@ -1,6 +1,6 @@
 import React from "react";
 import { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux/es/exports";
+import { useDispatch, useSelector } from "react-redux";
 import { fetchPosts, selectFilteredPosts, /*setSearchTerm,*/ fetchComments } from "../../app/redditSlice";
 import Post from "../Post/Post";
 import './Content.css'
@@ -29,7 +29,7 @@ export default function Content() {
 
     if (isLoading) {
       return (
-        <div class="lds-spinner">
+        <div className="lds-spinner">
           <div></div>
           <div></div>
           <div></div>
