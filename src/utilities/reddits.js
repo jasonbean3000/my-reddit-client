@@ -4,6 +4,7 @@ import music from '../resources/images/music.jpeg'
 import cooking from '../resources/images/cooking.jpeg'
 import popcorn from '../resources/images/popcorn.jpeg'
 import travel from '../resources/images/travel.jpeg'
+import fishing from '../resources/images/fishing.jpeg'
 export const API_URL = 'https://www.reddit.com'
 
 
@@ -23,17 +24,17 @@ export const REDDITS = [
     subscribers: '136.285'
   },
   {
-    id: '2o0xq2',
-    title: 'Dirt Jumps',
-    url: '/r/dirtjumps', // 336k members
+    id: '2qjv9',
+    title: 'BMX',
+    url: '/r/bmx', // 336k members
     icon_img: bmx,
-    subscribers: '72'
+    subscribers: '54.650'
   },
   {
     id: '2qlu4',
     title: 'Fishing',
     url: '/r/fishing', // 15.4m members
-    icon_img: 'https://b.thumbs.redditmedia.com/iHIS0yfwYwsNbfBPCgfVudzoEYBQNYTwDXOHa63w0tg.png',
+    icon_img: fishing,
     subscribers: '1.250.525'
   },
   {
