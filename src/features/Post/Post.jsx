@@ -6,6 +6,8 @@ import {
 
 import Comment from '../Comment/Comment';
 import Avatar from "../Avatar/Avatar";
+import moment from "moment/moment";
+
 export default function Post(props) {
     const { post, onToggleComments } = props;
 
@@ -59,9 +61,10 @@ export default function Post(props) {
                 target="_blank" 
                 rel="noreferrer"
                 >
-                Posted by {post.author}
+                Posted by {post.author} ({moment.unix(post.created_utc).fromNow()})
             </a>
-            <p className="post-title">{post.title}</p>
+            
+            <article className="post-title">{post.title}</article>
             <p>{post.comment}</p>
             
             <img src={post.url} alt="" className="post-image" />       
