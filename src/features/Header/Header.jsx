@@ -1,8 +1,9 @@
 import { React }from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useState, useEffect } from "react";
+import { NavLink } from "react-router-dom";
 import { /*selectSubreddits*/ } from "../../app/subRedditSlice";
-import { setSelectedSubreddit, /*selectSelectedSubreddit*/ } from "../../app/redditSlice";
+import { setSelectedSubreddit } from "../../app/redditSlice";
 import { HiOutlineSearch } from 'react-icons/hi';
 import './Header.css'
 import greenbean from '../../resources/images/greenbeans.jpg'
@@ -44,11 +45,16 @@ export default function Header() {
     return (
         <div className="subreddit">
         
-            <div
-                className="header-title-container"
-                onClick={() => dispatch(setSelectedSubreddit('/r/soccer'))}>
-                <img src={greenbean} alt='' className="green-bean-logo"/>
-                <h3 className="header-title">Reddit<span>Bean</span></h3>
+            <div className="header-title-container">
+                    <NavLink to='/r/soccer'>
+                        <img 
+                            src={greenbean} 
+                            alt='' className="green-bean-logo" 
+                            onClick={() => dispatch(setSelectedSubreddit('/r/soccer'))}/>
+                    </NavLink>
+                    <NavLink to='/r/soccer' className="header-title">
+                        <h3 onClick={() => dispatch(setSelectedSubreddit('/r/soccer'))}>Reddit<span>Bean</span></h3>
+                    </NavLink>
             </div>
             <form className="search" onSubmit={onSearchTermSubmit}>
                 <input
