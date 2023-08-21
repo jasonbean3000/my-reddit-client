@@ -39,7 +39,10 @@ export default function Subreddits() {
                   to={subreddit.url}
                   className="navlink"
                   type="button"
-                  onClick={() => dispatch(setSelectedSubreddit(subreddit.url))}
+                  onClick={() => {
+                    dispatch(setSelectedSubreddit(subreddit.url));
+                    toggleMenu();
+                  }}
                 >
                   {subreddit.title}
                 </NavLink>
