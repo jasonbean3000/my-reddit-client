@@ -3,11 +3,11 @@ import { useDispatch, useSelector } from "react-redux";
 import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { /*selectSubreddits*/ } from "../../app/subRedditSlice";
-import { setSelectedSubreddit, fetchPosts, fetchComments } from "../../app/redditSlice";
+import { setSelectedSubreddit, fetchPosts } from "../../app/redditSlice";
 import { HiOutlineSearch } from 'react-icons/hi';
 import './Header.css'
 import greenbean from '../../resources/images/greenbeans.jpg'
-import { setSearchTerm } from "../../app/redditSlice";
+
 import { useHistory } from 'react-router-dom';
 
 
