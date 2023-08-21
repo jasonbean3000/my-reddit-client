@@ -21,6 +21,11 @@
     font-family: 'Arial', 'Courier New', Courier, monospace;
 }
 
+.post-content {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding: 0 24px;
+}
+
 .post-image {
     max-width: 100%;
     position: relative;
@@ -43,6 +48,12 @@
     cursor: pointer;
     text-decoration: underline;
     font-size: 1.1rem;
+}
+
+.post-url {
+  padding: 0 0 20px 20px;
+  max-width: 500px;
+  overflow: hidden;
 }
 
 .lds-spinner {

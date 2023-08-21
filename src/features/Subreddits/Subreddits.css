@@ -59,27 +59,69 @@
     align-items: center;
 }
 
-@media only screen and (max-width: 500px) {
-    .navlink-info {
-      display: none;
-    }
-    .subreddits-header {
-        font-size: .65rem;
-    }
-    
+.hamburger-menu {
+    position: relative;
+    display: none;
   }
-
-  @media only screen and (max-width: 550px ) {
-    .navlink-info {
-        display: none;
-    }
-    .navlink-img {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        width: 50%;
-    }
-    
   
+  .hamburger-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+  }
+  
+  .hamburger-icon {
+    display: block;
+    width: 30px;
+    height: 2px;
+    background-color: #333;
+    position: relative;
+  
+    &::before,
+    &::after {
+      content: '';
+      display: block;
+      width: 30px;
+      height: 2px;
+      background-color: #333;
+      position: absolute;
+      transition: transform 0.3s ease;
+    }
+  
+    &::before {
+      top: -8px;
+    }
+  
+    &::after {
+      top: 8px;
+    }
+  }
+  
+  .open .hamburger-icon {
+    background-color: transparent;
+  }
+  
+
+  
+  .hamburger-button-container {
+    display: none;
+  }
+  
+  .open .hamburger-button-container {
+    display: block;
+    /* ... other styling for the open menu */
+  }
+  
+  @media only screen and (max-width: 968px ) {
+    .hamburger-menu {
+        position: relative;
+        display: block;
+      }
+    .hamburger-button-container .menu-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        grid-gap: 16px; /* Adjust the gap between items as needed */
+    }
   }
   

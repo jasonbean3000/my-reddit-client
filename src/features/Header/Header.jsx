@@ -3,16 +3,19 @@ import { useDispatch, useSelector } from "react-redux";
 import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { /*selectSubreddits*/ } from "../../app/subRedditSlice";
-import { setSelectedSubreddit } from "../../app/redditSlice";
+import { setSelectedSubreddit, fetchPosts, fetchComments } from "../../app/redditSlice";
 import { HiOutlineSearch } from 'react-icons/hi';
 import './Header.css'
 import greenbean from '../../resources/images/greenbeans.jpg'
 import { setSearchTerm } from "../../app/redditSlice";
+import { useHistory } from 'react-router-dom';
 
 
 
 export default function Header() {
 
+    const history = useHistory();
+  
     const [searchTermLocal, setSearchTermLocal] = useState('');
 
     const searchTerm = useSelector((state) => state.reddit.searchTerm);
@@ -20,6 +23,17 @@ export default function Header() {
     const dispatch = useDispatch();
     // const subreddits = useSelector(selectSubreddits);
     // const selectedSubreddit = useSelector(selectSelectedSubreddit);
+    const onSearchTermSubmit = (e) => {
+        e.preventDefault();
+        if (searchTermLocal) {
+          const subredditUrl = `/r/${searchTermLocal}`;
+          dispatch(setSelectedSubreddit(subredditUrl));
+          dispatch(fetchPosts(subredditUrl));
+          // If you want to fetch comments as well
+          // dispatch(fetchComments(subredditUrl));
+          history.push(subredditUrl);
+        }
+      }
 
     const onSearchTermChange = (e) => {
         setSearchTermLocal(e.target.value);
@@ -35,12 +49,7 @@ export default function Header() {
         // will run everytime a variable in searchTerm changes
         }, [searchTerm]);
     
-    const onSearchTermSubmit = (e) => {
-        e.preventDefault();
-        // dispatches setSearchTerm with searchTermLocal as action argument
-        // this will dispatch our searchTerm on submit
-        dispatch(setSearchTerm(searchTermLocal));
-      };
+    
 
     return (
         <div className="subreddit">
@@ -59,7 +68,7 @@ export default function Header() {
             <form className="search" onSubmit={onSearchTermSubmit}>
                 <input
                     type="text"
-                    placeholder="Search"
+                    placeholder="Search for a subreddit"
                     onChange={onSearchTermChange}
                     aria-label="Search posts"
                     />

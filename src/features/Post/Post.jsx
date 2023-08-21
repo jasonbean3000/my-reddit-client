@@ -5,11 +5,22 @@ import {
   } from 'react-icons/ti';
 
 import Comment from '../Comment/Comment';
-import Avatar from "../Avatar/Avatar";
 import moment from "moment/moment";
 
 export default function Post(props) {
     const { post, onToggleComments } = props;
+
+    const formatText = (text) => {
+      const regex = /\[(.*?)\]\((https?:\/\/[^\s)]+)\)/g;
+  
+      const paragraphs = text.split("\n").map((paragraph, index) => (
+        <p key={index} dangerouslySetInnerHTML={{ __html: paragraph.replace(regex, '<a target="blank" href="$2">$1</a>') }} />
+      ));
+  
+      return paragraphs;
+    };
+  
+  
 
     const renderComments = () => {
         if (post.errorComments) {
@@ -50,21 +61,27 @@ export default function Post(props) {
         }
     
         return null;
-      };
+    };
 
     return (
         <div className="post" key={post.id}>
-            <Avatar name={post.author} />
-            <a
-                className="post-author" 
-                href={post.url} 
-                target="_blank" 
-                rel="noreferrer"
-                >
-                Posted by {post.author} ({moment.unix(post.created_utc).fromNow()})
-            </a>
             
+            <h2 className="post-author">
+                Posted by <b>{post.author}</b> ({moment.unix(post.created_utc).fromNow()})
+            </h2>
             <article className="post-title">{post.title}</article>
+            <a href={post.url} className="post-url" target="blank">{post.url}</a>
+            <article className="post-content"><p>{formatText(post.selftext)}</p></article>
+
+            {post.media && post.media.reddit_video && (
+              <video controls className="post-video">
+              <source src={post.media.reddit_video.fallback_url} type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            )}
+
+           
+
             <p>{post.comment}</p>
             
             <img src={post.url} alt="" className="post-image" />       

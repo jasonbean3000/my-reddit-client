@@ -8,14 +8,14 @@ header {
 main {
   display: grid;
   grid-template-areas: "aside container open";
-  grid-template-columns: 25% 50% 25%;
+  grid-template-columns: 25% 60% 15%;
   
 }
 
 aside {
   width: 13%;
-  position: fixed;
-  z-index: 1;
+  min-width: 200px;
+  
   grid-area: aside;
 }
 
@@ -32,6 +32,9 @@ aside {
   margin-right: 5%;
 }
 
+
+
+/* 
 @media only screen and (max-width: 500px) {
   main {
     grid-template-areas: "aside container container";
@@ -51,17 +54,35 @@ aside {
    width: 60%;
    z-index: 0;
   }
-}
+} */
 
-@media only screen and (max-width: 950px ) and (min-width: 700px){
-  aside {
-   
-   width: 20%;
-   
+@media only screen and (max-width: 968px ){
+  main {
+    display: block;
   }
+  aside {
+   width: 100%;
+  }
+  .icon-image {
+    display: none;
+  }
+  .aside {
+    display: block;
+    margin: 0px;
+  }
+  .button-container {
+  display: none;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 16px; /* Adjust the gap between items as needed */
+    
+  }
+  .subscribers {
+    display: none;
+  }
+
 }
 
-@media only screen and (max-width: 550px ) {
+/* @media only screen and (max-width: 550px ) {
   aside {
    width: 20%;
   }
@@ -69,6 +90,6 @@ aside {
     grid-template-areas: "aside container container";
   }
 
-}
+} */
 
 
